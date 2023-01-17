@@ -12,8 +12,6 @@ interface Props {
 export default function Iconify(props: Props) {
   const { icon, width, className } = props;
 
-  console.log(colors);
-
   let variants;
   switch (width) {
     case "small":
