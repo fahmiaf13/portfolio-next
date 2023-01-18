@@ -1,7 +1,9 @@
+import { Header } from "@/components";
+
 export default function Head() {
   return (
     <>
-      <title>Create Next App</title>
+      <Header title="Articles" />
     </>
   );
 }

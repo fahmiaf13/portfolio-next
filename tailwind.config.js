@@ -10,6 +10,8 @@ module.exports = {
       colors: {
         milk: "#F5F5F5",
         darker: "#515151",
+        "neon-blue": "#00AFDB",
+        "neon-yellow": "#FDDA25",
       },
     },
   },
