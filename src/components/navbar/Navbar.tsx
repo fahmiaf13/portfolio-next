@@ -32,7 +32,7 @@ const navList = [
 
 export default function Navbar() {
   return (
-    <div className="fixed bg-transparent w-full h-16">
+    <div className="fixed bg-milk/30 backdrop-blur-md w-full h-16">
       <ul className="flex h-full gap-10 justify-center items-center">
         {navList.map((item, index) => (
           <li key={index} className="text-sm">

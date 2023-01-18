@@ -1,6 +1,7 @@
 import React from "react";
 import { mont } from "@/assets/fonts";
 import { Card } from "@/components";
+import { experienceDatas } from "@/data/ExperienceData";
 
 export default function Experience() {
   return (
@@ -13,9 +14,9 @@ export default function Experience() {
         </div>
         <div className="h-3/4">
           <div className="w-full flex-wrap flex gap-3">
-            <Card />
-            <Card />
-            <Card />
+            {experienceDatas.map((experience, index) => (
+              <Card key={index} data={experience} />
+            ))}
           </div>
         </div>
       </div>
