@@ -12,7 +12,7 @@ interface Props {
 export default function Iconify(props: Props) {
   const { icon, width, className } = props;
 
-  let variants;
+  let variants: string | number;
   switch (width) {
     case "small":
       variants = 24;

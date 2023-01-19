@@ -12,6 +12,7 @@ module.exports = {
         darker: "#515151",
         "neon-blue": "#00AFDB",
         "neon-yellow": "#FDDA25",
+        tomato: "#FB3640",
       },
     },
   },

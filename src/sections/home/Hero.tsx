@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-import { IconButton, Iconify } from "@/components";
 import HeroImg from "public/img/hero-img.png";
 import Image from "next/image";
 import React from "react";
@@ -16,11 +15,6 @@ export default function Hero() {
           </h2>
         </div>
         <Image src={HeroImg} alt="hero-img" priority />
-        <div className="fixed bottom-5 right-5">
-          <IconButton>
-            <Iconify icon="fluent:document-one-page-24-filled" width={30} className="text-milk" />
-          </IconButton>
-        </div>
       </div>
     </section>
   );

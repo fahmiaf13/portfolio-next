@@ -2,6 +2,7 @@ import React from "react";
 import { mont } from "@/assets/fonts";
 import { Card } from "@/components";
 import { experienceDatas } from "@/data/ExperienceData";
+import { IExperiencesData } from "@/types/data";
 
 export default function Experience() {
   return (
