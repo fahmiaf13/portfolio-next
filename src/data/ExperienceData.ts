@@ -1,5 +1,6 @@
 import SagaraIcon from "/public/icons/ic-sagara.svg";
 import SoluvasIcon from "/public/icons/ic-soluvas.svg";
+import MagprotechIcon from "/public/icons/ic-magprotech.svg";
 import { IExperiencesData } from "@/types/data";
 
 export const experienceDatas: IExperiencesData[] = [
@@ -33,7 +34,7 @@ export const experienceDatas: IExperiencesData[] = [
   {
     company: "Magprotech",
     role: "Embedded System Engineer",
-    icon: SagaraIcon,
+    icon: MagprotechIcon,
     entryDate: "Aug 2022 - Nov 2022",
     status: "Contract",
     desc: [
