@@ -6,5 +6,6 @@ export * from "./input";
 export * from "./navbar";
 export * from "./footer";
 export * from "./forms";
+export * from "./carousel";
 
 // export * from "./sidebar";
