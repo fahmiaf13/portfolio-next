@@ -3,6 +3,15 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
-}
+  swcMinify: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "placekitten.com",
+      },
+    ],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
