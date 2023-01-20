@@ -7,5 +7,6 @@ export const mont = localFont({
     { path: "./mont/Mont-Heavy.otf", weight: "700", style: "normal" },
   ],
   preload: true,
+  display: "swap",
 });
-export const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], display: "optional" });
+export const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"], display: "swap", preload: true });
