@@ -1,5 +1,4 @@
 import { mont } from "@/assets/fonts";
-
 import { ContactForms } from "@/components";
 export default function Contact() {
   return (

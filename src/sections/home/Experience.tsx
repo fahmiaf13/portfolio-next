@@ -1,8 +1,8 @@
 import React from "react";
 import { mont } from "@/assets/fonts";
-import { Card } from "@/components";
+import { Card, Carousel } from "@/components";
 import { experienceDatas } from "@/data/ExperienceData";
-import { IExperiencesData } from "@/types/data";
+import Image from "next/image";
 
 export default function Experience() {
   return (
@@ -14,10 +14,12 @@ export default function Experience() {
           </div>
         </div>
         <div className="h-3/4">
-          <div className="w-full flex-wrap flex gap-3">
-            {experienceDatas.map((experience, index) => (
-              <Card key={index} data={experience} />
-            ))}
+          <div className="w-full">
+            <Carousel>
+              {experienceDatas.map((experience, index) => (
+                <Card key={index} data={experience} />
+              ))}
+            </Carousel>
           </div>
         </div>
       </div>

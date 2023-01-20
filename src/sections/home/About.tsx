@@ -19,7 +19,7 @@ export default function About() {
             </div>
             <div className="col-span-2">
               <div className="text-sm">
-                <p className="text-lg text-neon-yellow">
+                <p className="text-lg text-neon-blue">
                   "Introducing, my name is <span className={`${mont.className} font-extrabold uppercase`}>Fahmi Achmad Fahrudin</span>"
                 </p>
                 <br />

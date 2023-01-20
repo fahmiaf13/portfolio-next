@@ -9,7 +9,7 @@ interface Props {
 export default function Card(props: Props) {
   const { data } = props;
   return (
-    <div className=" bg-milk w-96 p-6 rounded-xl shadow-lg border-darker/10 border-2">
+    <div className=" bg-milk max-h-[550px] w-96 p-6 rounded-xl  border-darker/10 border-2">
       <div className="flex justify-center items-center gap-2">
         <div className="rounded-full w-20 h-20 p-5 border-darker/10 border-2">
           <Image src={data.icon} alt="soluvas" className="rounded-full w-full h-full" />
