@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="w-4/12 flex flex-col items-start justify-center gap-1">
             <div className="font-extralight text-sm">Was Made with:</div>
             <div className="flex gap-1 items-center">
-              <Iconify icon="logos:nextjs" width={70} />
+              <Iconify icon="logos:nextjs" size={70} />
               <Iconify icon="vscode-icons:file-type-tailwind" />
               <Iconify icon="vscode-icons:file-type-typescript-official" />
             </div>
