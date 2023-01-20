@@ -10,9 +10,9 @@ export default function Contact() {
           </div>
         </div>
         <div className="h-3/4">
-          <div className="flex h-full">
+          <div className="flex lg:flex-row flex-col h-full">
             <div className="w-1/2" />
-            <div className="w-1/2">
+            <div className="w-full lg:w-1/2">
               <ContactForms />
             </div>
           </div>

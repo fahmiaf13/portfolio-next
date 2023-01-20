@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import React from "react";
+import { useScreenSize } from "@/hooks";
+import { useEffect, useState } from "react";
 
 const navList = [
   {
@@ -31,15 +32,32 @@ const navList = [
 ];
 
 export default function Navbar() {
+  const [isHide, setIsHide] = useState<boolean>(true);
+  const screenSize = useScreenSize();
+
+  useEffect(() => {
+    if (screenSize < 600) {
+      setIsHide(false);
+    } else {
+      setIsHide(true);
+    }
+  }, [screenSize]);
+
   return (
-    <div className="fixed z-[99] bg-milk/30 backdrop-blur-md w-full h-16">
-      <ul className="flex h-full gap-10 justify-center items-center">
-        {navList.map((item, index) => (
-          <li key={index} className="text-sm">
-            <Link href={item.url}>{item.name}</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      {isHide ? (
+        <div className="fixed z-[99] bg-milk/30 backdrop-blur-md w-full h-16">
+          <ul className="flex h-full gap-10 justify-center items-center">
+            {navList.map((item, index) => (
+              <li key={index} className="text-sm">
+                <Link href={item.url}>{item.name}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : (
+        <></>
+      )}
+    </>
   );
 }

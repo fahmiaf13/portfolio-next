@@ -1,10 +1,23 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import { mont } from "@/assets/fonts";
 import { Card, Carousel } from "@/components";
 import { experienceDatas } from "@/data/ExperienceData";
-import Image from "next/image";
+import { useScreenSize } from "@/hooks";
 
 export default function Experience() {
+  const [isHide, setIsHide] = useState<boolean>(true);
+  const screenSize = useScreenSize();
+
+  useEffect(() => {
+    if (screenSize < 1024) {
+      setIsHide(false);
+    } else {
+      setIsHide(true);
+    }
+  }, [screenSize]);
+
   return (
     <section className="h-screen bg-milk">
       <div className="flex flex-col container h-full">
@@ -14,13 +27,19 @@ export default function Experience() {
           </div>
         </div>
         <div className="h-3/4">
-          <div className="w-full">
+          {isHide ? (
+            <div className="w-full flex gap-3">
+              {experienceDatas.map((experience, index) => (
+                <Card key={index} data={experience} />
+              ))}
+            </div>
+          ) : (
             <Carousel>
               {experienceDatas.map((experience, index) => (
                 <Card key={index} data={experience} />
               ))}
             </Carousel>
-          </div>
+          )}
         </div>
       </div>
     </section>

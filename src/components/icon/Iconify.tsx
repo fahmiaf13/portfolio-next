@@ -5,15 +5,15 @@ import colors from "tailwindcss/colors";
 
 interface Props {
   icon: IconifyIcon | string;
-  width?: number | string;
+  size?: number | string;
   className?: string;
 }
 
 export default function Iconify(props: Props) {
-  const { icon, width, className } = props;
+  const { icon, size, className } = props;
 
   let variants: string | number;
-  switch (width) {
+  switch (size) {
     case "small":
       variants = 24;
       break;
@@ -24,7 +24,7 @@ export default function Iconify(props: Props) {
       variants = 48;
       break;
     default:
-      variants = width || 36;
+      variants = size || 36;
   }
 
   return <Icon icon={icon} width={variants} className={className} />;

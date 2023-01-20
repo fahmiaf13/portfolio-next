@@ -13,11 +13,11 @@ export default function About() {
           </div>
         </div>
         <div className="h-3/4">
-          <div className="grid grid-cols-3 gap-10">
+          <div className="grid grid-rows-3 lg:grid-cols-3 gap-0 lg:gap-10">
             <div className="justify-self-center">
               <Image src={AboutImg} alt="about" priority className="w-96" />
             </div>
-            <div className="col-span-2">
+            <div className="col-span-1 text-center lg:text-left lg:col-span-2">
               <div className="text-sm">
                 <p className="text-lg text-neon-blue">
                   "Introducing, my name is <span className={`${mont.className} font-extrabold uppercase`}>Fahmi Achmad Fahrudin</span>"

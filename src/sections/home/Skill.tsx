@@ -91,7 +91,7 @@ const iconSkill = {
 
 export default function Skill() {
   return (
-    <div className="flex flex-col bg-darker text-milk h-screen justify-center items-center gap-5">
+    <section className="flex flex-col bg-darker text-milk h-screen justify-center items-center gap-5">
       <h2 className={`${mont.className} font-extrabold`}>SKILL</h2>
       <div className="text-xl font-extrabold">TECH STACK</div>
       <div className="flex gap-3 opacity-30">
@@ -106,6 +106,6 @@ export default function Skill() {
           <Iconify key={index} icon={item.icon} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
