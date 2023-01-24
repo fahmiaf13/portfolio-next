@@ -11,7 +11,6 @@ export default function Hero() {
         <div className="flex w-full lg:w-1/2 flex-col items-center justify-end gap-5">
           <div className="text-center font-extrabold">
             <h1 className="text-5xl md:text-7xl">HELLO, I'M</h1>
-            {/* <h2 className="text-3xl md:text-5xl" style={{ WebkitTextStroke: "1.5px #515151", color: "transparent" }}> */}
             <h2 className="text-3xl md:text-5xl outlined-text">FRONT-END DEVELOPER</h2>
           </div>
           <Image src={HeroImg} alt="hero-img" priority className="w-64 md:w-80" />
