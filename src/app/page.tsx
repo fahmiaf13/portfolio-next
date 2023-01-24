@@ -9,6 +9,8 @@ export default function Home() {
     <ReactFullpage
       //fullpage options
       licenseKey={"YOUR_KEY_HERE"}
+      navigation={true}
+      fadingEffect={true}
       scrollingSpeed={1000} /* Options here */
       render={({ state, fullpageApi }) => (
         <ReactFullpage.Wrapper>

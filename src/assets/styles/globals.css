@@ -85,8 +85,17 @@ p {
   font-weight: 100;
 }
 
+.outlined-text {
+  -webkit-text-stroke: 1.5px #515151;
+  color: transparent;
+}
+
 .fp-watermark {
   display: none;
+}
+
+#fp-nav.fp-right {
+  right: 20px;
 }
 
 @media only screen and (min-width: 640px) {
@@ -99,9 +108,15 @@ p {
   h2 {
     font-size: 1.875rem;
   }
+  .outlined-text {
+    -webkit-text-stroke: 1px #515151;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
+  #fp-nav.fp-right {
+    right: 10px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

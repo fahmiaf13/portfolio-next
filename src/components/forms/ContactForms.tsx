@@ -11,8 +11,7 @@ export default function ContactForms() {
       <form className=" flex flex-col items-center gap-3 mt-10">
         <TextField placeholder="Name" />
         <TextField placeholder="Email" type="email" />
-        <TextField placeholder="Messages" type="email" />
-        <TextArea />
+        <TextArea placeholder="Your Message Here" />
         <Button color="blue">SUBMIT</Button>
       </form>
     </div>

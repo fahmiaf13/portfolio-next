@@ -1,6 +1,14 @@
 import React from "react";
 
-export default function TextArea() {
+interface Props {
+  name?: string;
+  placeholder: string;
+
+  size?: "small" | "medium" | "large";
+}
+
+export default function TextArea(props: Props) {
+  const { name, placeholder } = props;
   const error = false;
   return (
     <div className="w-full">
@@ -8,6 +16,7 @@ export default function TextArea() {
         <textarea
           // {...field}
 
+          name={name}
           placeholder=" "
           className={`${
             error
@@ -30,7 +39,7 @@ export default function TextArea() {
               : "text-neon-blue peer-focus:text-neon-blue before:border-neon-blue  peer-focus:before:border-neon-blue after:border-neon-blue peer-focus:after:border-neon-blue peer-placeholder-shown:text-darker/30 peer-disabled:peer-placeholder-shown:text-neon-blue"
           } capitalize flex w-full h-full select-none pointer-events-none absolute left-0 font-normal leading-tight peer-focus:leading-tight peer-disabled:text-transparent transition-all -top-1.5 peer-placeholder-shown:text-sm text-[11px] peer-focus:text-[11px] before:content[' '] before:block before:box-border before:w-2.5 before:h-1.5 before:mt-[6.5px] before:mr-1 peer-placeholder-shown:before:border-transparent before:rounded-tl-md before:border-t peer-focus:before:border-t-2 before:border-l peer-focus:before:border-l-2 before:pointer-events-none before:transition-all peer-disabled:before:border-transparent after:content[' '] after:block after:flex-grow after:box-border after:w-2.5 after:h-1.5 after:mt-[6.5px] after:ml-1 peer-placeholder-shown:after:border-transparent after:rounded-tr-md after:border-t peer-focus:after:border-t-2 after:border-r peer-focus:after:border-r-2 after:pointer-events-none after:transition-all peer-disabled:after:border-transparent peer-placeholder-shown:leading-[3.75] `}
         >
-          Your Message Here
+          {placeholder}
         </label>
       </div>
       {/* <label className="text-sm text-tomato">{error?.message}</label> */}

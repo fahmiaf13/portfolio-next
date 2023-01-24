@@ -19,14 +19,12 @@ export default function Experience() {
   }, [screenSize]);
 
   return (
-    <section className="h-screen bg-milk">
-      <div className="flex flex-col container h-full">
-        <div className="h-1/4">
-          <div className={`${mont.className} text-center font-extrabold flex items-center justify-center h-full`}>
-            <h2>EXPERIENCE</h2>
-          </div>
+    <section className="h-screen  bg-milk">
+      <div className="container flex flex-col h-full justify-center gap-5">
+        <div className={`${mont.className} text-center font-extrabold `}>
+          <h2>EXPERIENCE</h2>
         </div>
-        <div className="h-3/4">
+        <div>
           {isHide ? (
             <div className="w-full flex gap-3">
               {experienceDatas.map((experience, index) => (
