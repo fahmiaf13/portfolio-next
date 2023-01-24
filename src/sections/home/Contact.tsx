@@ -11,7 +11,9 @@ export default function Contact() {
         </div>
         <div className="h-3/4">
           <div className="flex lg:flex-row flex-col h-full">
-            <div className="w-1/2" />
+            <div className="w-1/2 font-extrabold text-neon-blue">
+              <h2>Want to get in touch?</h2>
+            </div>
             <div className="w-full lg:w-1/2">
               <ContactForms />
             </div>

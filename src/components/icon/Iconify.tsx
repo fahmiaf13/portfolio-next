@@ -1,7 +1,6 @@
 "use client";
 
 import { Icon, IconifyIcon } from "@iconify/react";
-import colors from "tailwindcss/colors";
 
 interface Props {
   icon: IconifyIcon | string;
@@ -24,7 +23,7 @@ export default function Iconify(props: Props) {
       variants = 48;
       break;
     default:
-      variants = size || 36;
+      variants = size || 24;
   }
 
   return <Icon icon={icon} width={variants} className={className} />;

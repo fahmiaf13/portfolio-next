@@ -1,37 +1,50 @@
 /* eslint-disable react/no-unescaped-entities */
 import Image from "next/image";
-import AboutImg from "/public/img/about-img.png";
+import AboutImg from "/public/img/about-img.jpg";
 import { mont } from "@/assets/fonts";
+import { Iconify } from "@/components";
+import { Icon } from "@iconify/react";
 
 export default function About() {
   return (
-    <section className="h-screen bg-darker text-milk ">
-      <div className="flex flex-col h-full container">
-        <div className="h-1/4">
-          <div className={`${mont.className} text-center font-extrabold flex items-center justify-center h-full`}>
-            <h2>ABOUT ME</h2>
+    // <section className="h-screen sm:py-0 bg-darker text-milk ">
+    //   <div className="container flex flex-col gap-y-10 items-center justify-center h-full">
+    //     <div className={`${mont.className} text-center font-extrabold `}>
+    //       <h2>ABOUT ME</h2>
+    //     </div>
+    //     <div className="flex flex-col gap-5">
+    //       <div className="flex justify-center max-w-8/12 basis-8/12 grow-0 md:basis-4/12 md:max-w-4/12 object-cover">
+    //         <Image src={AboutImg} alt="about-img" className="md:max-w-full h-full" priority />
+    //       </div>
+    //       <div className="w-full flex flex-col items-center justify-center md:items-start md:justify-start md:w-8/12">
+    //         <div className="lg:text-left text-center text-[12px] sm:text-sm">
+    //           <p className="text-[14px] sm:text-lg">Introducing, my name is Fahmi Achmad Fahrudin</p>
+    //           <p>
+    //             "1 year of experience as a front-end developer has honed my skills in creating clean, organized, and efficient code. My innate curiosity and desire to learn allows me to bring new ideas and innovative solutions to every
+    //             project I work on."
+    //           </p>
+    //         </div>
+    //       </div>
+    //     </div>
+    //   </div>
+    // </section>
+    <section className="h-screen bg-darker text-milk">
+      <div className="container items-center justify-center h-full flex">
+        <div className="flex w-full lg:w-1/2 flex-col items-center gap-5">
+          <div className="text-center font-extrabold">
+            <h2 className={`${mont.className} text-center font-extrabold `}>ABOUT ME</h2>
           </div>
-        </div>
-        <div className="h-3/4">
-          <div className="grid grid-rows-3 lg:grid-cols-3 gap-0 lg:gap-10">
-            <div className="justify-self-center">
-              <Image src={AboutImg} alt="about" priority className="w-96" />
-            </div>
-            <div className="col-span-1 text-center lg:text-left lg:col-span-2">
-              <div className="text-sm">
-                <p className="text-lg text-neon-blue">
-                  "Introducing, my name is <span className={`${mont.className} font-extrabold uppercase`}>Fahmi Achmad Fahrudin</span>"
-                </p>
-                <br />
-                As a graduate of electrical engineering from Telkom University, I have a strong foundation in programming and technology. However, my interest in Front End Development started since my junior high school, where I had my own
-                blogspot which opened the door for me to explore this field. <br /> <br /> I chose to focus on this field where I can combine my technical skills with creativity to create attractive, intuitive and industry standard
-                interfaces. I have experience in developing responsive and accessible websites using the latest technologies such as HTML, CSS, and JavaScript. I am also proficient in using frameworks such as React and Vue. <br /> <br /> My
-                passion in this field grew stronger since my early age, and I've been continuously expanding my knowledge and skill set in this field. I always prioritize the user experience in every project I work on. I enjoy the design
-                and development process, from gathering user feedback to iterating to improve the final quality. I am ready to continue learning and developing myself in the field of Front End Development. I am confident that with my
-                skills, passion and experience, I can make a significant contribution to the development of innovative and high-quality applications.
-              </div>
-            </div>
-          </div>
+          <Image src={AboutImg} alt="hero-img" priority className="w-64" />
+          <p className="text-center text-sm font-extralight">
+            "1 year of experience as a front-end developer has honed my skills in creating clean, organized, and efficient code. My innate curiosity and desire to learn allows me to bring new ideas and innovative solutions to every project
+            I work on."
+          </p>
+          <button className="flex h-full items-center text-sm gap-1 text-darker bg-milk py-2 px-5">
+            See Details{` `}
+            <span>
+              <Icon icon="material-symbols:arrow-outward-rounded" />
+            </span>
+          </button>
         </div>
       </div>
     </section>

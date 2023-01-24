@@ -1,9 +1,9 @@
-import { Header } from "@/components";
+import { RootHead } from "@/components";
 
 export default function Head() {
   return (
     <>
-      <Header title="Portfolio" />
+      <RootHead title="Portfolio" />
     </>
   );
 }

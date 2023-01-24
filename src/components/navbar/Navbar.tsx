@@ -36,7 +36,7 @@ export default function Navbar() {
   const screenSize = useScreenSize();
 
   useEffect(() => {
-    if (screenSize < 600) {
+    if (screenSize < 768) {
       setIsHide(false);
     } else {
       setIsHide(true);

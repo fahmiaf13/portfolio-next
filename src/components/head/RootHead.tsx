@@ -2,7 +2,7 @@ interface IHeaderProps {
   title: string;
 }
 
-export default function Header({ title }: IHeaderProps) {
+export default function RootHead({ title }: IHeaderProps) {
   return (
     <>
       <title>{`Fahmi | ${title}`}</title>

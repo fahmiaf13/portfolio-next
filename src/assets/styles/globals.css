@@ -85,6 +85,25 @@ p {
   font-weight: 100;
 }
 
+.fp-watermark {
+  display: none;
+}
+
+@media only screen and (min-width: 640px) {
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 3.75rem;
+  }
+  h2 {
+    font-size: 1.875rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
