@@ -101,7 +101,7 @@ export default function Skill() {
       </div>
 
       <div className="text-xl font-extrabold">OTHER SKILLS</div>
-      <div className="flex gap-3 opacity-30">
+      <div className="flex flex-wrap justify-center gap-3 opacity-30">
         {iconSkill?.otherSkill.map((item, index) => (
           <Iconify key={index} icon={item.icon} />
         ))}

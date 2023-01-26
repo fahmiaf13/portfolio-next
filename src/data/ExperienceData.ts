@@ -8,7 +8,7 @@ export const experienceDatas: IExperiencesData[] = [
     company: "Soluvas",
     role: "Front-End Developer",
     icon: SoluvasIcon,
-    entryDate: "Oct 2022 - Present",
+    entryDate: "Oct 2022 - Jan 2023",
     status: "Full-Time",
     desc: [
       "Work closely with Project Manager and collaborating with designers to ensure good visual integration with the code",
