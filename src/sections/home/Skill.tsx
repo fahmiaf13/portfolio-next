@@ -1,61 +1,58 @@
 import { mont } from "@/assets/fonts";
 import { Iconify } from "@/components";
+import Link from "next/link";
 
 const iconSkill = {
   techStack: [
     {
       icon: "fa-brands:react",
-      link: "",
+      link: "https://beta.reactjs.org/",
     },
     {
       icon: "mdi:language-typescript",
-      link: "",
+      link: "https://www.typescriptlang.org/",
     },
     {
       icon: "simple-icons:redux",
-      link: "",
+      link: "https://redux-toolkit.js.org/",
     },
     {
       icon: "mdi:tailwind",
-      link: "",
-    },
-    {
-      icon: "fa-brands:react",
-      link: "",
+      link: "https://tailwindcss.com/",
     },
     {
       icon: "file-icons:nextjs",
-      link: "",
+      link: "https://nextjs.org/",
     },
   ],
   otherSkill: [
     {
       icon: "cib:arduino",
-      link: "",
+      link: "https://www.arduino.cc/",
     },
     {
       icon: "teenyicons:c-solid",
-      link: "",
+      link: "https://devdocs.io/c/",
     },
     {
       icon: "icomoon-free:html-five",
-      link: "",
+      link: "https://devdocs.io/html/",
     },
     {
       icon: "simple-icons:css3",
-      link: "",
+      link: "https://devdocs.io/css/",
     },
     {
       icon: "bxl:javascript",
-      link: "",
+      link: "https://www.javascript.com/",
     },
     {
       icon: "mdi:bootstrap",
-      link: "",
+      link: "https://getbootstrap.com/",
     },
     {
       icon: "mdi:sass",
-      link: "",
+      link: "https://sass-lang.com/",
     },
     {
       icon: "akar-icons:vue-fill",
@@ -63,28 +60,28 @@ const iconSkill = {
     },
     {
       icon: "teenyicons:nodejs-solid",
-      link: "",
+      link: "https://vuejs.org/",
     },
 
     {
       icon: "simple-icons:windicss",
-      link: "",
+      link: "https://windicss.org/",
     },
     {
       icon: "mdi:git",
-      link: "",
+      link: "https://git-scm.com/",
     },
     {
       icon: "file-icons:adobe-photoshop",
-      link: "",
+      link: "https://www.adobe.com/id_id/products/photoshop.html",
     },
     {
       icon: "file-icons:adobe-illustrator",
-      link: "",
+      link: "https://www.adobe.com/id_id/products/illustrator.html",
     },
     {
       icon: "ph:figma-logo-bold",
-      link: "",
+      link: "https://www.figma.com/",
     },
   ],
 };
@@ -96,14 +93,18 @@ export default function Skill() {
       <div className="text-xl font-extrabold">TECH STACK</div>
       <div className="flex gap-3 opacity-30">
         {iconSkill?.techStack.map((item, index) => (
-          <Iconify key={index} icon={item.icon} />
+          <Link key={index} href={item.link} className="hover:text-milk/30 duration-300">
+            <Iconify icon={item.icon} />
+          </Link>
         ))}
       </div>
 
       <div className="text-xl font-extrabold">OTHER SKILLS</div>
       <div className="flex flex-wrap justify-center gap-3 opacity-30">
         {iconSkill?.otherSkill.map((item, index) => (
-          <Iconify key={index} icon={item.icon} />
+          <Link key={index} href={item.link} className="hover:text-milk/30 duration-300">
+            <Iconify icon={item.icon} />
+          </Link>
         ))}
       </div>
     </section>
