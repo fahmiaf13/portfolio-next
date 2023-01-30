@@ -1,7 +1,6 @@
 export interface IExperiencesData {
   company: string;
   role: string;
-  IIconData: string;
   entryDate: string;
   status: string;
   desc: string[];
