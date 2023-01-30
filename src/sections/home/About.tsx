@@ -2,7 +2,7 @@
 import Image from "next/image";
 import AboutImg from "/public/img/about-img.jpg";
 import { mont } from "@/assets/fonts";
-import { Iconify } from "@/components";
+import { Button } from "@/components";
 import { Icon } from "@iconify/react";
 
 export default function About() {
@@ -18,12 +18,12 @@ export default function About() {
             "1 year of experience as a front-end developer has honed my skills in creating clean, organized, and efficient code. My innate curiosity and desire to learn allows me to bring new ideas and innovative solutions to every project
             I work on."
           </p>
-          <button className="flex h-full items-center text-sm gap-1 text-darker bg-milk py-2 px-5">
-            See Details{` `}
+          <Button color="white" className="flex gap-1 text-sm items-center">
+            <span>See Details</span>
             <span>
               <Icon icon="material-symbols:arrow-outward-rounded" />
             </span>
-          </button>
+          </Button>
         </div>
       </div>
     </section>

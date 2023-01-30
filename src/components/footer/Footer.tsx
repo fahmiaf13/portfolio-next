@@ -2,41 +2,7 @@ import Image from "next/image";
 import Logo from "public/icons/ic-logo.svg";
 import { Iconify } from "@/components";
 import Link from "next/link";
-
-const iconFooter = {
-  social: [
-    {
-      icon: "mdi:twitter",
-      link: "https://twitter.com/fahmiaf13",
-    },
-    {
-      icon: "mdi:github",
-      link: "https://github.com/fahmiaf13",
-    },
-    {
-      icon: "mdi:linkedin",
-      link: "https://www.linkedin.com/in/fahmi-achmad-fahrudin",
-    },
-  ],
-  support: [
-    {
-      icon: "file-icons:nextjs",
-      link: "https://nextjs.org/",
-    },
-    {
-      icon: "mdi:tailwind",
-      link: "https://tailwindcss.com/",
-    },
-    {
-      icon: "mdi:language-typescript",
-      link: "https://www.typescriptlang.org/",
-    },
-    {
-      icon: "ion:logo-vercel",
-      link: "https://vercel.com",
-    },
-  ],
-};
+import { iconFooter } from "@/data/IconsData";
 
 export default function Footer() {
   return (
@@ -51,7 +17,7 @@ export default function Footer() {
             <div className="text-lg font-extrabold text-milk/30 tracking-wide">SOCIAL</div>
             <div className="flex gap-2">
               {iconFooter?.social?.map((item, index) => (
-                <Link key={index} href={item.link} className="hover:text-milk/10 duration-300 text-milk/30">
+                <Link key={index} href={item.link} target="_blank" className="hover:text-milk/10 duration-300 text-milk/30">
                   <Iconify icon={item.icon} />
                 </Link>
               ))}
@@ -61,7 +27,7 @@ export default function Footer() {
             <div className="text-lg font-extrabold text-milk/30 tracking-wide">WAS BUILT WITH</div>
             <div className="flex gap-2">
               {iconFooter?.support?.map((item, index) => (
-                <Link key={index} href={item.link} className="hover:text-milk/10 duration-300 text-milk/30">
+                <Link key={index} href={item.link} target="_blank" className="hover:text-milk/10 duration-300 text-milk/30">
                   <Iconify icon={item.icon} />
                 </Link>
               ))}

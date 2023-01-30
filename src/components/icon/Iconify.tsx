@@ -2,13 +2,13 @@
 
 import { Icon, IconifyIcon } from "@iconify/react";
 
-interface Props {
+interface PropsIcon {
   icon: IconifyIcon | string;
   size?: number | string;
   className?: string;
 }
 
-export default function Iconify(props: Props) {
+export default function Iconify(props: PropsIcon) {
   const { icon, size, className } = props;
 
   let variants: string | number;

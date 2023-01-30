@@ -1,19 +1,33 @@
 import React from "react";
 import { buttonColor } from "@/theme/button";
-interface Props {
-  children: React.ReactNode;
-  color: "blue" | "black" | string;
-}
-export default function Button(props: Props) {
-  const { children, color } = props;
 
-  let variants: string;
+interface ButtonProps {
+  children: React.ReactNode;
+  color: "blue" | "black" | "white" | string;
+  className?: string;
+  fullWidth?: boolean;
+  disabled?: boolean;
+  loading?: boolean;
+  onClick?: (event: any) => void;
+}
+
+export default function Button(props: ButtonProps) {
+  const { children, color, className, fullWidth, disabled, loading, onClick } = props;
+
+  let colors: string;
   switch (color) {
     case "blue":
-      variants = buttonColor.blue;
+      colors = buttonColor.blue;
+      break;
+    case "white":
+      colors = buttonColor.white;
       break;
     default:
-      variants = buttonColor.dark;
+      colors = buttonColor.dark;
   }
-  return <button className={`${variants} text-sm font-extrabold rounded-lg w-full tracking-wider py-2 px-4`}>{children}</button>;
+  return (
+    <button onClick={onClick} disabled={disabled || loading} className={`${colors} ${className} ${fullWidth && "w-full"} disabled:opacity-30 disabled:pointer-events-none cursor-pointer duration-300 tracking-wider py-2 px-4`}>
+      {children}
+    </button>
+  );
 }

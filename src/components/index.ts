@@ -9,5 +9,4 @@ export * from "./footer";
 export * from "./forms";
 export * from "./carousel";
 export * from "./modal";
-
-// export * from "./sidebar";
+export * from "./hamburger-menu";

@@ -1,3 +1,5 @@
+"use client";
+
 import { navList } from "@/data/NavigationList";
 import { Iconify } from "../icon";
 import { useModal } from "@/hooks";
