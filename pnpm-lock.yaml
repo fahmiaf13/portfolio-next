@@ -4,6 +4,7 @@ specifiers:
   '@ap.cx/react-fullpage': ^0.3.0
   '@ap.cx__react-fullpage': link:@types/@ap.cx__react-fullpage
   '@fullpage/react-fullpage': ^0.1.31
+  '@hookform/resolvers': ^2.9.10
   '@iconify/react': ^4.0.1
   '@next/font': 13.1.2
   '@types/node': 18.11.18
@@ -33,6 +34,7 @@ specifiers:
 dependencies:
   '@ap.cx/react-fullpage': 0.3.0_biqbaboplfbrettd7655fr4n2y
   '@fullpage/react-fullpage': 0.1.31
+  '@hookform/resolvers': 2.9.10_react-hook-form@7.42.1
   '@next/font': 13.1.2
   '@types/node': 18.11.18
   '@types/react': 18.0.26
@@ -164,6 +166,14 @@ packages:
     dependencies:
       '@babel/polyfill': 7.12.1
       fullpage.js: 4.0.15
+    dev: false
+
+  /@hookform/resolvers/2.9.10_react-hook-form@7.42.1:
+    resolution: {integrity: sha512-JIL1DgJIlH9yuxcNGtyhsWX/PgNltz+5Gr6+8SX9fhXc/hPbEIk6wPI82nhgvp3uUb6ZfAM5mqg/x7KR7NAb+A==}
+    peerDependencies:
+      react-hook-form: ^7.0.0
+    dependencies:
+      react-hook-form: 7.42.1_react@18.2.0
     dev: false
 
   /@humanwhocodes/config-array/0.11.8:

@@ -9,10 +9,11 @@ interface ButtonProps {
   disabled?: boolean;
   loading?: boolean;
   onClick?: (event: any) => void;
+  type?: "submit";
 }
 
 export default function Button(props: ButtonProps) {
-  const { children, color, className, fullWidth, disabled, loading, onClick } = props;
+  const { children, color, className, fullWidth, disabled, loading, onClick, type } = props;
 
   let colors: string;
   switch (color) {
@@ -26,7 +27,7 @@ export default function Button(props: ButtonProps) {
       colors = buttonColor.dark;
   }
   return (
-    <button onClick={onClick} disabled={disabled || loading} className={`${colors} ${className} ${fullWidth && "w-full"} disabled:opacity-30 disabled:pointer-events-none cursor-pointer duration-300 tracking-wider py-2 px-4`}>
+    <button type={type} onClick={onClick} disabled={disabled || loading} className={`${colors} ${className} ${fullWidth && "w-full"} disabled:opacity-30 disabled:pointer-events-none cursor-pointer duration-300 tracking-wider py-2 px-4`}>
       {children}
     </button>
   );
