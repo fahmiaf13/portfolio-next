@@ -1,6 +1,6 @@
 "use client";
 
-import { Hero, About, Skill, Contact, Project } from "@/sections/home";
+import { Hero, About, Skill, Project } from "@/sections/home";
 import { Footer } from "@/components";
 import ReactFullpage from "@fullpage/react-fullpage";
 import { ProjectCardsData } from "@/data/ProjectData";
