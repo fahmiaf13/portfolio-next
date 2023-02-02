@@ -9,6 +9,7 @@ export interface IExperiencesData {
 export interface IIconData {
   icon: string;
   link: string;
+  color?: string;
 }
 
 export type IIcons = {

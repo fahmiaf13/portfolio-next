@@ -1,10 +1,29 @@
 "use client";
 
-import { Hero, About, Skill, Experience, Articles, Contact } from "@/sections/home";
+import { Hero, About, Skill, Contact, Project } from "@/sections/home";
 import { Footer } from "@/components";
-import ReactFullpage from "@fullpage/react-fullpage"; // will return static version on server and "live" version on client
+import ReactFullpage from "@fullpage/react-fullpage";
+import { ProjectCardsData } from "@/data/ProjectData";
+import { useEffect, useState } from "react"; // will return static version on server and "live" version on client
 
 export default function Home() {
+  // const [hideNavbar, setHideNavbar] = useState(false);
+
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const section = document.querySelector("#contact");
+  //     if (section) {
+  //       const sectionTop = section.offsetTop;
+  //       setHideNavbar(window.pageYOffset >= sectionTop);
+  //     }
+  //   };
+
+  //   window.addEventListener("scroll", handleScroll);
+
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
   return (
     <ReactFullpage
       //fullpage options
@@ -23,15 +42,11 @@ export default function Home() {
           <div className="section">
             <Skill />
           </div>
-          <div className="section">
-            <Experience />
-          </div>
-          <div className="section">
-            <Articles />
-          </div>
-          <div className="section">
-            <Contact />
-          </div>
+          {ProjectCardsData.map((item, index) => (
+            <div key={index} className="section">
+              <Project data={item} />
+            </div>
+          ))}
           <div className="section">
             <Footer />
           </div>

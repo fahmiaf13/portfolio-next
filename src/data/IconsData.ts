@@ -32,6 +32,7 @@ const icons: IIcons = {
   react: {
     icon: "fa-brands:react",
     link: "https://beta.reactjs.org/",
+    color: "#006CB8",
   },
   redux: {
     icon: "simple-icons:redux",
@@ -72,6 +73,7 @@ const icons: IIcons = {
   node: {
     icon: "teenyicons:nodejs-solid",
     link: "https://nodejs.org/en/",
+    color: "#06CB8",
   },
   windicss: {
     icon: "simple-icons:windicss",
@@ -133,24 +135,41 @@ export const iconFooter = {
 export const skillsIcon = {
   techStack: [
     {
+      name: "React",
       icon: icons.react.icon,
       link: icons.react.link,
+      desc: "React is a JavaScript library for UI development, providing reusable components and efficient state management.",
+      color: icons.react.color,
     },
     {
+      name: "TypeScript",
       icon: icons.typescript.icon,
       link: icons.typescript.link,
+      desc: "TypeScript is a statically typed extension of JavaScript with improved scalability and bug-detection, used for large-scale web development projects.",
     },
     {
+      name: "Redux",
       icon: icons.redux.icon,
       link: icons.redux.link,
+      desc: "Redux is a JavaScript state management library that centralizes app state, facilitates management and debugging, and is often used with React.      ",
     },
     {
+      name: "Tailwind",
       icon: icons.tailwind.icon,
       link: icons.tailwind.link,
+      desc: "Tailwind is a utility-first CSS framework for fast UI building with pre-designed classes.",
     },
     {
+      name: "Next",
       icon: icons.nextjs.icon,
       link: icons.nextjs.link,
+      desc: "Next.js is a React framework for fast and scalable server-rendered web apps with features for optimized performance.",
+    },
+    {
+      name: "Node Js",
+      icon: icons.node.icon,
+      link: icons.node.link,
+      desc: "Node.js is a server-side JavaScript runtime environment for building fast, scalable network applications. It uses event-driven, non-blocking I/O for efficiency.      ",
     },
   ],
   otherSkill: [

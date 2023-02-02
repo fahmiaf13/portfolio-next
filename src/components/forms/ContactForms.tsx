@@ -3,6 +3,7 @@
 import { Button } from "../button";
 import { TextField } from "../input";
 import TextArea from "../input/TextArea";
+import axios from "axios";
 // hooks-form
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -30,20 +31,28 @@ export default function ContactForms() {
     resolver: yupResolver(schema),
   });
 
-  const handleLogin = (data: FormValue) => {
-    console.log("submitted", data);
+  const handleLogin = async (data: FormValue) => {
+    try {
+      const res = await axios.post("/api/contact", data);
+      console.log("response received", res);
+      if (res.status === 200) {
+        console.log("response success");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
-    <div className="bg-milk text-darker w-full border-darker/30 shadow-lg border-[1px] rounded-xl p-5">
-      <h3 className="font-extrabold text-center text-darker">
+    <div className=" text-milk w-full">
+      <h3 className="font-extrabold text-center text-2xl">
         Feel Free To <span className="text-neon-blue ">Contact Me!</span>
       </h3>
       <form className=" flex flex-col items-center gap-3 mt-10" onSubmit={handleSubmit(handleLogin)}>
         <TextField control={control} name="name" placeholder="Name" />
         <TextField control={control} name="email" placeholder="Email" type="email" />
         <TextArea control={control} name="message" placeholder="Your Message Here" />
-        <Button type="submit" color="blue">
+        <Button type="submit" color="white">
           SUBMIT
         </Button>
       </form>

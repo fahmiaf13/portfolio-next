@@ -6,10 +6,11 @@ interface PropsIcon {
   icon: IconifyIcon | string;
   size?: number | string;
   className?: string;
+  color?: string;
 }
 
 export default function Iconify(props: PropsIcon) {
-  const { icon, size, className } = props;
+  const { icon, size, color, className } = props;
 
   let variants: string | number;
   switch (size) {
@@ -26,5 +27,5 @@ export default function Iconify(props: PropsIcon) {
       variants = size || 24;
   }
 
-  return <Icon icon={icon} width={variants} className={className} />;
+  return <Icon icon={icon} color={color || ""} width={variants} className={className} />;
 }

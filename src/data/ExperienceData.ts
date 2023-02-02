@@ -9,7 +9,7 @@ export const experienceDatas: IExperiencesData[] = [
     role: "Front-End Developer",
     icon: SoluvasIcon,
     entryDate: "Oct 2022 - Jan 2023",
-    status: "Full-Time",
+    status: "Contract",
     desc: [
       "Work closely with Project Manager and collaborating with designers to ensure good visual integration with the code",
       "Develop web application using Typescript, Material UI, React JS and Next JS",

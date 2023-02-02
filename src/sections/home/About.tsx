@@ -1,29 +1,87 @@
 /* eslint-disable react/no-unescaped-entities */
-import Image from "next/image";
-import AboutImg from "/public/img/about-img.jpg";
 import { mont } from "@/assets/fonts";
-import { Button } from "@/components";
+import { Button, Card, CardContent, CardHeader, Carousel } from "@/components";
+import { experienceDatas } from "@/data/ExperienceData";
 import { Icon } from "@iconify/react";
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import { useScreenSize } from "@/hooks";
 
 export default function About() {
+  const [isHide, setIsHide] = useState<boolean>(true);
+  const screenSize = useScreenSize();
+
+  useEffect(() => {
+    if (screenSize < 1024) {
+      setIsHide(false);
+    } else {
+      setIsHide(true);
+    }
+  }, [screenSize]);
   return (
-    <section className="h-screen bg-darker text-milk">
-      <div className="container items-center justify-center h-full flex">
-        <div className="flex w-full lg:w-1/2 flex-col items-center gap-5">
-          <div className="text-center font-extrabold">
-            <h2 className={`${mont.className} text-center font-extrabold `}>ABOUT ME</h2>
+    <section className="h-screen  bg-milk">
+      <div className="container flex flex-col h-full justify-center gap-5 ">
+        <div className="w-full flex justify-center">
+          <div className={`${mont.className} text-center font-extrabold w-full md:w-1/2`}>
+            <h2 className="my-5">About me</h2>
+            <p className="text-sm">
+              "1 year of experience as a front-end developer has honed my skills in creating clean, organized, and efficient code. My innate curiosity and desire to learn allows me to bring new ideas and innovative solutions to every
+              project I work on.”
+            </p>
           </div>
-          <Image src={AboutImg} alt="hero-img" priority className="w-64" />
-          <p className="text-center text-sm font-extralight">
-            "1 year of experience as a front-end developer has honed my skills in creating clean, organized, and efficient code. My innate curiosity and desire to learn allows me to bring new ideas and innovative solutions to every project
-            I work on."
-          </p>
-          <Button color="white" className="flex gap-1 text-sm items-center">
-            <span>See Details</span>
-            <span>
-              <Icon icon="material-symbols:arrow-outward-rounded" />
-            </span>
-          </Button>
+        </div>
+        <div>
+          {isHide ? (
+            <div className="w-full flex gap-3">
+              {experienceDatas.map((data, index) => (
+                <Card key={index}>
+                  <CardHeader>
+                    <div className="rounded-full w-20 h-20 p-5 border-darker/10 border-2">
+                      <Image src={data.icon} alt="soluvas" className="rounded-full w-full h-full" />
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="font-extrabold text-xl">{data.company}</div>
+                    <div className="text-sm text-neon-blue">{data.role}</div>
+                    <div className="text-sm">{data.entryDate}</div>
+                    <div className="text-sm">{data.status}</div>
+                    <ul className="text-sm flex flex-col gap-2 mt-5">
+                      {data?.desc.map((item, index) => (
+                        <li key={index} className="pb-2 border-b-2">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          ) : (
+            <Carousel>
+              {experienceDatas.map((data, index) => (
+                <Card key={index}>
+                  <CardHeader>
+                    <div className="rounded-full w-20 h-20 p-5 border-darker/10 border-2">
+                      <Image src={data.icon} alt="soluvas" className="rounded-full w-full h-full" />
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="font-extrabold text-xl">{data.company}</div>
+                    <div className="text-sm text-neon-blue">{data.role}</div>
+                    <div className="text-sm">{data.entryDate}</div>
+                    <div className="text-sm">{data.status}</div>
+                    <ul className="text-sm flex flex-col gap-2 mt-5">
+                      {data?.desc.map((item, index) => (
+                        <li key={index} className="pb-2 border-b-2">
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              ))}
+            </Carousel>
+          )}
         </div>
       </div>
     </section>
