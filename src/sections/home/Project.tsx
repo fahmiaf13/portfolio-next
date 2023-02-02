@@ -11,7 +11,7 @@ export default function Project({ data }: any) {
           <h2 className={`${mont.className} font-extrabold text-center`}>{data.name}</h2>
           <div>
             <Link href="/" className="group">
-              <Image src={data.img} alt={data.name} width={300} className="rounded-xl group-hover:w-[320px] duration-500 shadow-xl" />
+              <Image src={data.img} alt={data.name} width={300} className="rounded-xl group-hover:w-[320px] duration-500 shadow-xl" priority />
             </Link>
           </div>
           <p className="text-sm">{data.desc}</p>

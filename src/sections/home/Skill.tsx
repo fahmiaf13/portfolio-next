@@ -1,10 +1,22 @@
 "use client";
 import { mont } from "@/assets/fonts";
-import { Iconify } from "@/components";
+import { Iconify, Carousel } from "@/components";
 import Link from "next/link";
 import { skillsIcon } from "@/data/IconsData";
+import { useState, useEffect } from "react";
+import { useScreenSize } from "@/hooks";
 
 export default function Skill() {
+  const [isHide, setIsHide] = useState<boolean>(true);
+  const screenSize = useScreenSize();
+
+  useEffect(() => {
+    if (screenSize < 1024) {
+      setIsHide(false);
+    } else {
+      setIsHide(true);
+    }
+  }, [screenSize]);
   return (
     <section className="bg-milk text-darker h-screen">
       <div className="container h-full flex flex-col justify-center">
@@ -12,17 +24,37 @@ export default function Skill() {
           <div className="w-full">
             <div className={`${mont.className} font-extrabold text-5xl mb-2`}>Tech Stack</div>
           </div>
-          {skillsIcon?.techStack.map((item, index) => (
-            <div key={index} className="basis-1/3 flex flex-shrink p-2">
-              <div key={index} className="group gap-2 flex flex-col hover:border-darker/100 border-darker/30 text-darker/30 hover:text-darker/100 border-[1px] duration-300 rounded-xl p-3 cursor-pointer">
-                <Link href={item.link} target="_blank">
-                  <Iconify icon={item.icon} />
-                </Link>
-                <div className="font-extrabold">{item.name}</div>
-                <div className="text-sm">{item.desc}</div>
-              </div>
+          {isHide ? (
+            <>
+              {skillsIcon?.techStack.map((item, index) => (
+                <div key={index} className="basis-1/3 flex flex-shrink p-2">
+                  <div key={index} className="group gap-2 flex flex-col hover:border-darker/100 border-darker/30 text-darker/30 hover:text-darker/100 border-[1px] duration-300 rounded-xl p-3 cursor-pointer">
+                    <Link href={item.link} target="_blank">
+                      <Iconify icon={item.icon} />
+                    </Link>
+                    <div className="font-extrabold">{item.name}</div>
+                    <div className="text-sm">{item.desc}</div>
+                  </div>
+                </div>
+              ))}
+            </>
+          ) : (
+            <div className="w-full my-3">
+              <Carousel>
+                {skillsIcon?.techStack.map((item, index) => (
+                  <div key={index} className="basis-full flex flex-shrink p-2">
+                    <div key={index} className="group gap-2 flex flex-col hover:border-darker/100 border-darker/30 text-darker/30 hover:text-darker/100 border-[1px] duration-300 rounded-xl p-3 cursor-pointer">
+                      <Link href={item.link} target="_blank">
+                        <Iconify icon={item.icon} />
+                      </Link>
+                      <div className="font-extrabold">{item.name}</div>
+                      <div className="text-sm">{item.desc}</div>
+                    </div>
+                  </div>
+                ))}
+              </Carousel>
             </div>
-          ))}
+          )}
         </div>
         <div className={`${mont.className} font-extrabold text-5xl my-5`}>Other Skill</div>
         <div className="flex gap-2 flex-wrap">

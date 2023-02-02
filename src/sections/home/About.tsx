@@ -1,8 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { mont } from "@/assets/fonts";
-import { Button, Card, CardContent, CardHeader, Carousel } from "@/components";
+import { Card, CardContent, CardHeader, Carousel } from "@/components";
 import { experienceDatas } from "@/data/ExperienceData";
-import { Icon } from "@iconify/react";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useScreenSize } from "@/hooks";

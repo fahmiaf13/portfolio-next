@@ -1,6 +1,7 @@
 import CardOmmar from "public/img/card-ommar.png";
 import CardSagara from "public/img/card-sagara.png";
 import CardPertamina from "public/img/card-pertamina.png";
+import CardTunov from "public/img/card-tunov.png";
 
 export const ProjectCardsData = [
   {
@@ -20,5 +21,11 @@ export const ProjectCardsData = [
     img: CardSagara,
     desc: "A website for company executives and investors to track Sagara Technology's financial performance and product progress.",
     color: "radial-gradient(circle, #454545, #3b3b3b, #313131, #272727, #1e1e1e);",
+  },
+  {
+    name: "Tunov",
+    img: CardTunov,
+    desc: "It is a website to display products produced by an online totebag store named tunov.",
+    color: "radial-gradient(circle, #ecce90, #eec97d, #f0c46a, #f2bf56, #f4ba40);",
   },
 ];

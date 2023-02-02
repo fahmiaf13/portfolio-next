@@ -14,6 +14,8 @@ export default function Carousel({ children }: Props) {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplaying: true,
+    autoplaySpeed: 3000,
   };
   return <Slider {...settings}>{children}</Slider>;
 }

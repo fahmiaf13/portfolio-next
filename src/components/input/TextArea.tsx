@@ -15,7 +15,7 @@ export default function TextArea(props: Props) {
 
   return (
     <div className="w-full">
-      <div className="relative w-full  h-36 flex items-center">
+      <div className="relative w-full h-auto flex items-center">
         <textarea
           {...field}
           placeholder=" "
