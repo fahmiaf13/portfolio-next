@@ -11,7 +11,7 @@ interface Props {
 
 export default function Modal({ children, onClose, open }: Props) {
   return (
-    <div className={`fixed bg-darker text-milk h-screen w-screen z-[99] ${open ? "block" : "hidden"}`}>
+    <div className={`fixed bg-darker text-milk h-screen w-screen z-[110] ${open ? "block" : "hidden"}`}>
       <div className="flex h-full items-center justify-center w-full relative">
         <div>
           <IconButton onClick={onClose}>

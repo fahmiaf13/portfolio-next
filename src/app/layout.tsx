@@ -1,3 +1,5 @@
+"use client";
+
 import "@/assets/styles/globals.css";
 import { plusJakartaSans } from "@/assets/fonts";
 import { Footer, MainHeader } from "@/components";

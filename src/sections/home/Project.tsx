@@ -5,7 +5,7 @@ import { mont } from "@/assets/fonts";
 
 export default function Project({ data }: any) {
   return (
-    <section style={{ backgroundImage: data.color }} className="h-screen text-milk">
+    <section id={data.name} style={{ backgroundImage: data.color }} className="h-screen text-milk">
       <main className="container flex justify-center h-full items-center">
         <div className="w-3/4 sm:w-1/2 flex flex-col gap-5 items-center ">
           <h2 className={`${mont.className} font-extrabold text-center`}>{data.name}</h2>
