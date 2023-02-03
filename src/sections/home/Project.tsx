@@ -10,7 +10,7 @@ export default function Project({ data }: any) {
         <div className="w-3/4 sm:w-1/2 flex flex-col gap-5 items-center ">
           <h2 className={`${mont.className} font-extrabold text-center`}>{data.name}</h2>
           <div>
-            <Link href="/" className="group">
+            <Link href={data.link} target="_blank" className="group">
               <Image src={data.img} alt={data.name} width={300} className="rounded-xl group-hover:w-[320px] duration-500 shadow-xl" priority />
             </Link>
           </div>
