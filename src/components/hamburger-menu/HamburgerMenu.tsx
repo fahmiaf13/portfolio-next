@@ -6,7 +6,6 @@ import { motion, useCycle } from "framer-motion";
 import { MenuToggle } from "./MenuToggle";
 import { Navigation } from "./Navigation";
 import { useDimensions } from "@/hooks/useDimensions";
-import "./style.css";
 
 const sidebar = {
   open: (height = 1000) => ({
@@ -33,8 +32,8 @@ export default function HamburgerMenu() {
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
   return (
-    <motion.nav id="hamburger-nav" initial={false} animate={isOpen ? "open" : "closed"} custom={height} ref={containerRef} className="z-[999]">
-      <motion.div className="background" variants={sidebar} />
+    <motion.nav initial={false} animate={isOpen ? "open" : "closed"} custom={height} ref={containerRef} className="absolute top-0 left-0 bottom-0 w-[300px] z-[999]">
+      <motion.div className="absolute top-0 left-0 bottom-0 w-screen bg-darker" variants={sidebar} />
       <Navigation open={isOpen} />
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>

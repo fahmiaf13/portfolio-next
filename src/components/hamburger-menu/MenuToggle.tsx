@@ -1,10 +1,11 @@
+"use client";
 import * as React from "react";
 import { motion } from "framer-motion";
 
 const Path = (props: any) => <motion.path fill="transparent" strokeWidth="3" stroke="hsl(0, 100%, 100%)" strokeLinecap="round" {...props} />;
 
 export const MenuToggle = ({ toggle }: any) => (
-  <button className="hamburger-btn" onClick={toggle}>
+  <button className="absolute top-[18px] left-[29px] w-[50px] h-[50px] cursor-pointer" onClick={toggle}>
     <svg width="23" height="23" viewBox="0 0 23 23">
       <Path
         variants={{
