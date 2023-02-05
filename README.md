@@ -1,39 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio
 
-## Getting Started
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
 
-First, run the development server:
+A personal portfolio created by me. Was built the latest feature of Next JS 13 (app folder)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+## ⚙️ Tech Stack
+
+<a href="https://nextjs.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" alt="react" width="40" height="40"/> </a>
+<a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="react" width="40" height="40"/> </a>
+<a href="https://tailwindcss.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" alt="tailwind" width="40" height="40"/> </a>
+<a href="[https://developer.mozilla.org/en-US/docs/Web/JavaScript](https://www.typescriptlang.org/)" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" alt="typescript" width="40" height="40"/> </a>
+<a href="https://pnpm.io" target="_blank" rel="noreferrer"> <img src="https://d33wubrfki0l68.cloudfront.net/aad219b6c931cebb53121dcda794f6180d9e4397/14f40/id/assets/images/pnpm-standard-79c9dbb2e99b8525ae55174580061e1b.svg" alt="pnpm" width="40" height="40"/> </a>
+
+## 📚 Structure
+
+**Structure Folder**
+
+```
+1. ./src/app -> to store some pages
+2. ./src/components -> store component web app.
+3. ./src/data -> to store necessary data
+4 ./src/hooks -> to store all the hooks function that commonly used
+5. ./src/pages/api -> to store some API or middleware
+6. ./src/routes -> to store all routes that been used in
+7. ./src/sections -> to store some scetions that used in pages
+8. ./src/themes -> to store a theme of some components
+9. ./src/types -> to store a types
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📥 Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Install portfolio-next with pnpm
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Clone the project
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+$ git clone https://github.com/fahmiaf13/portfolio-next.git
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Go to the project directory
 
-## Learn More
+```bash
+$ cd portfolio-next
+```
 
-To learn more about Next.js, take a look at the following resources:
+Install dependencies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+$ pnpm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Start the server
 
-## Deploy on Vercel
+```bash
+$ pnpm run dev
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# portfolio-next
+Copyright (c) 2023 Fahmi Achmad
